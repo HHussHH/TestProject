@@ -1,0 +1,54 @@
+.PositionControl{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    &__panel{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title{
+        font-size: 12px;
+        font-weight: 400;
+        color:rgba(255, 255, 255, 0.5);
+    }
+    &__details{
+        display: flex;
+        gap:8px;
+        &-wrapper{
+            display: flex;
+            align-items: center;
+            gap:17px;
+        }
+    }
+    &__detail{
+        font-size: 12px;
+        font-weight: 400;
+        padding:5.5px 16px;
+        background: rgba(38, 38, 38, 1);
+        border-radius: 8px;
+        color:rgba(255, 255, 255, 1);
+        cursor: pointer;
+    }
+    &__actions{
+        display: flex;
+        gap:8px;
+    }
+    &__btn{
+        border-radius: 10px;
+        border: none;
+        width: 100%;
+        padding-block:8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        &:first-child{
+            color:#97FCA6;
+            background: rgba(151, 252, 166, 0.1)
+        }
+        &:last-child{
+            color:#FF583A;
+            background: rgba(255, 88, 58, 0.1);
+        }
+    }
+}
