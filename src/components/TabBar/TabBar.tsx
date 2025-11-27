@@ -1,6 +1,8 @@
 import './TabBar.scss';
 import Trade from '../../assets/TradeIcon.svg?react';
 import TradeActive from '../../assets/TradeActive.svg?react';
+import ProfileActive from '../../assets/ProfileActive.svg?react';
+import PositionIconActive from '../../assets/PositionIconActive.svg?react';
 import Positions from '../../assets/PositionIcon.svg?react';
 import Rewards from '../../assets/EggIcon.svg?react';
 import Profile from '../../assets/profile.svg?react';
@@ -17,21 +19,21 @@ export const TabBar = ({children}: {children: React.ReactNode}) => {
         },
         {
             icon: <Positions className='TabBar__icon' />,
-            activeIcon: <TradeActive className='TabBar__icon-active' />,
+            activeIcon: <PositionIconActive className='TabBar__icon-active' />,
             name: 'Positions',
             notification: 0,
             path: '/positions',
         },
         {
             icon: <Rewards className='TabBar__icon' />,
-            activeIcon: <TradeActive className='TabBar__icon-active' />,
+            activeIcon: <Rewards className='TabBar__icon-active' />,
             name: 'Rewards',
             notification: 345290,
             path: '/rewards',
         },
         {
             icon: <Profile className='TabBar__icon' />,
-            activeIcon: <TradeActive className='TabBar__icon-active' />,
+            activeIcon: <ProfileActive className='TabBar__icon-active' />,
             name: 'Profile',
             notification: 0,
             path: '/profile',

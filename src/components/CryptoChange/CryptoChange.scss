@@ -1,7 +1,9 @@
 .CryptoChange {
-    width: 100vw;
-    height: 100vw;
-    max-height: 350px;
+    --crypto-tabbar-offset: var(--tabbar-height, 200px);
+    --crypto-gap-height: var(--change-crypto-gap-height, 104px);
+    width: 100%;
+    min-height: 0;
+    height: calc(100dvh - var(--crypto-tabbar-offset) - var(--crypto-gap-height));
     display: flex;
     flex-direction: column;
 
