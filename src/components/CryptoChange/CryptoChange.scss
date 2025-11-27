@@ -6,6 +6,11 @@
     height: calc(100dvh - var(--crypto-tabbar-offset) - var(--crypto-gap-height));
     display: flex;
     flex-direction: column;
+    margin-bottom: 16px;
+    
+    @media (max-width: 768px) {
+        margin-bottom: 20px;
+    }
 
     &__header {
         display: flex;
