@@ -1,0 +1,128 @@
+.CryptoChange {
+    width: 100vw;
+    height: 100vw;
+    max-height: 350px;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 12px;
+        gap: 8px;
+    }
+    &__column{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    &__button{
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: rgba(34, 34, 34, 1);
+        border: none;
+        cursor: pointer;
+        transition: scale 0.2s ease-in-out;
+        &:active{
+            scale: 0.9;
+        }
+    }
+    &__change{
+        font-size: 18px;
+        font-weight: 400;
+        &-up{
+            color: rgba(151, 252, 166, 0.9);
+        }
+        &-down{
+            color: rgba(255, 88, 58, 0.9);
+        }
+    }
+    &__price {
+        font-size: 30px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        &-decimal{
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__chart {
+        flex: 1;
+        width: 100%;
+        min-height: 0;
+        position: relative;
+
+        > *{
+            :focus{
+                outline: none;
+            }
+        }
+    }
+
+    &-comment{
+        position: absolute;
+        left: 12px;
+        bottom:15%;
+        transform: translateY(-15%);
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        list-style: none;
+        z-index: 1;
+        &__item{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+
+            &:not(:last-child){
+                opacity: 0.3;
+            }
+        }
+        &__item-header{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        &__username{
+            font-size: 12px;
+            font-weight: 500;
+            color:#15D260;
+            &-last{
+                color:#FF8000;
+            }
+        }
+        &__time{
+            font-size: 10px;
+            font-weight: 400;
+            color:#73767D;
+        }
+        &__value{
+            font-size: 12px;
+            font-weight: 500;
+            color:#fff;
+        }
+    }
+}
+
+.recharts-tooltip-item-value{
+    color: rgba(33, 33, 33, 1);
+    font-size: 10px;
+    font-weight: 400;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        width: 100vw;
+        height: 0.5px;
+        transform: translateY(-50%);
+        border-top: 1px dotted rgba(151, 252, 166, 1); 
+    }
+}
